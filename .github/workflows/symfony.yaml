@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   symfony-tests:
-    if: github.base_ref == 'develop'
+    if: github.base_ref == 'main'
 
     runs-on: ubuntu-latest
 
