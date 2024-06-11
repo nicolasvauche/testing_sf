@@ -6,10 +6,8 @@
 name: Symfony
 
 on:
-  pull_request:
-    branches: [ "develop" ]
   pull_request_target:
-    branches: [ "main" ]
+    branches: [ "develop" ]
 
 permissions:
   contents: read
