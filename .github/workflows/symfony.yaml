@@ -8,7 +8,7 @@ name: Symfony
 on:
   pull_request_target:
     types: [ opened ]
-    branches: [ develop ]
+    branches: [ main ]
 
 permissions:
   contents: read
