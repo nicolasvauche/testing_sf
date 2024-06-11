@@ -9,7 +9,7 @@ on:
   pull_request:
     branches: [ "develop" ]
   pull_request_target:
-    branches: [ "develop" ]
+    branches: [ "main" ]
 
 permissions:
   contents: read
