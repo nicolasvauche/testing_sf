@@ -17,11 +17,9 @@ WORKDIR /var/www/html
 # Copier le reste des fichiers du projet Symfony
 COPY . .
 
-# Installer les dépendances Symfony
-CMD ["composer", "install"]
-
 # Exposer le port utilisé par PHP-FPM
 EXPOSE 9000
 
-# Démarrer PHP-FPM
+# Installer les dépendances Symfony et démarrer PHP-FPM
 CMD ["php-fpm"]
+
