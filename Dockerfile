@@ -14,12 +14,16 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Définir le répertoire de travail
 WORKDIR /var/www/html
 
-# Copier le reste des fichiers du projet Symfony
+# Copier les fichiers du dossier de travail
 COPY . .
+
+# Ajouter un script d'entrée
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
 
 # Exposer le port utilisé par PHP-FPM
 EXPOSE 9000
 
-# Installer les dépendances Symfony et démarrer PHP-FPM
-CMD ["php-fpm"]
+# Utiliser le script d'entrée pour démarrer le conteneur
+ENTRYPOINT ["entrypoint.sh"]
 
