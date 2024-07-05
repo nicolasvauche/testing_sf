@@ -18,4 +18,10 @@ WORKDIR /var/www/html
 COPY . .
 
 # Installer les dépendances Symfony
-RUN composer install --no-scripts --no-interaction --no-plugins
+CMD ["composer", "install"]
+
+# Exposer le port utilisé par PHP-FPM
+EXPOSE 9000
+
+# Démarrer PHP-FPM
+CMD ["php-fpm"]
