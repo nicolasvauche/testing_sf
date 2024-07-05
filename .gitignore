@@ -3,6 +3,7 @@
 .vscode/
 public/test-coverage/
 .DS_Store
+composer.lock
 ###< app/local ###
 
 ###> symfony/framework-bundle ###
